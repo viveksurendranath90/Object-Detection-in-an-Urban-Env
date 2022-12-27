@@ -70,7 +70,7 @@ Keep in mind that you should refer to this analysis to create the different spit
 
 ### Create the training - validation splits
 Note: Skip this section if classroom workspace is used as data is already provided splitted and proceed to "Edit the config file" section.
-Create your own training and validation sets using the files located in `/home/workspace/data/waymo`. The `split` function in the `create_splits.py` file does the following:
+Create your own training and validation sets using the files located in `/home/workspace/data/waymo`. To do so, download `create_splits.py` file from [Project Github repository](https://github.com/udacity/nd013-c1-vision-starter). The `split` function in the `create_splits.py` file does the following:
 * create three subfolders: `/home/workspace/data/train/`, `/home/workspace/data/val/`, and `/home/workspace/data/test/`
 * split the tf records files between these three folders by symbolically linking the files from `/home/workspace/data/waymo/` to `/home/workspace/data/train/`, `/home/workspace/data/val/`, and `/home/workspace/data/test/`
 

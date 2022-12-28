@@ -62,7 +62,7 @@ Below images contain the performance matrix of model.
 ![img](Images/Tensorboard/precision_ref.png)
 
 * Performance metrics - learning rate<br>
-![img](Images/learning_rate.png)
+![img](Images/Tensorboard/learning_rate.png)
 
 The classification loss between training (.5132) and evaluation (.5560) is .428. Ideally, we have to improve the model for a better prediction on unseen data. Also, it should be noted that detection boxes precision for large and medium boxes can be improved.
 
@@ -105,7 +105,6 @@ The interference video for multiple set of test dataset is created.
 The object detection results are shown in the video below:
 
 <img src="Images/animation/animation1.gif" width="600">
-<hr>
 
 <img src="Images/animation/animation2.gif" width="600">
 <hr>

@@ -6,7 +6,7 @@ In this project, a convolutional neural network is created to detect and classif
 The training is monitored with a TensorBoard. Finally, hyperparameters's are tuned to improve the model's performance.<br>
 
 This project will include use of the TensorFlow Object Detection API, where you can deploy you model to get predictions on images sent to the API. A short video is created to assess the model predictions.<br>
-![img](images/intro.png)
+![img](Images/intro.png)
 
 ## Set up
 There are two options for the project: using the classroom workspace, with the necessary libraries and data already available for you, or local setup. If you want to use a local setup, you can use the below instructions for a Docker container if using your own local GPU, or otherwise creating a similar environment on a cloud provider's GPU instance. <br> 
@@ -28,11 +28,11 @@ The dataset from [Waymo Open dataset](https://waymo.com/open/) is used for this 
 This section contains a quantitative and qualitative description of the dataset.The data already present in `/home/workspace/data` directory is used to explore the dataset!. This can be done by launching `Exploratory Data Analysis` notebook. The three object classes are marked in rectabgular coloured boxes green (cyclists), red (cars), blue(pedestrians). 
 | | |
 |:---------------:|:---------------:|
-|<img src="images/EDA/EDA1.png" width="600" height ="400"> | <img src="images/EDA/EDA2.png" width="600" height="400"> |
+|<img src="Images/EDA/EDA1.png" width="600" height ="400"> | <img src="Images/EDA/EDA2.png" width="600" height="400"> |
 <hr>
 
 As an additional exploration, we are examining the distribution of classes in the image dataset.Here I take 10 random images to evaluate the class variance.
-![img](images/EDA/Additional_EDA.png)
+![img](Images/EDA/Additional_EDA.png)
 
 ### Cross validation
 
@@ -56,13 +56,13 @@ python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeli
 To monitor the training, you can launch a tensorboard instance by running `python -m tensorboard.main --logdir experiments/reference/`.
 Below images contain the performance matrix of model.
 * Performance metrics - training loss *(red)* vs. validation loss *(blue)*<br>
-![img](images/Tensorboard/classification_loss_ref.jpg)
+![img](Images/Tensorboard/classification_loss_ref.jpg)
 
 * Performance metrics - Detection box prediction<br>
-![img](images/Tensorboard/precision_ref.jpg)
+![img](Images/Tensorboard/precision_ref.jpg)
 
 * Performance metrics - learning rate<br>
-![img](images/learning_rate.svg)
+![img](Images/learning_rate.svg)
 
 The classification loss between training (.5132) and evaluation (.5560) is .428. Ideally, we have to improve the model for a better prediction on unseen data. Also, it should be noted that detection boxes precision for large and medium boxes can be improved.
 
@@ -82,9 +82,9 @@ I used the following augmentations:
 
 | | |
 |:---------------:|:---------------:|
-|<img src="images/aug1.png" width="400"> | <img src="images/aug2.png" width="400"> |
-|<img src="images/aug3.png" width="400"> | <img src="images/aug4.png" width="400"> |
-|<img src="images/aug5.png" width="400"> |
+|<img src="Images/aug1.png" width="400"> | <img src="Images/aug2.png" width="400"> |
+|<img src="Images/aug3.png" width="400"> | <img src="Images/aug4.png" width="400"> |
+|<img src="Images/aug5.png" width="400"> |
 
 The new model with added augmentaion serves the basline for the experiment 1, which can  be launched by:
 ```
@@ -92,10 +92,10 @@ python experiments/model_main_tf2.py --model_dir=experiments/experiment1/ --pipe
 ```
 The improved model performance matrix is as follows:
 * Performance metrics - training loss *(red)* vs. validation loss *(blue)*<br>
-![img](images/Tensorboard/classification_loss_exp1.jpg)
+![img](Images/Tensorboard/classification_loss_exp1.jpg)
 
 * Performance metrics - Detection box prediction<br>
-![img](images/Tensorboard/precision_exp1.jpg)
+![img](Images/Tensorboard/precision_exp1.jpg)
 
 It can be noted that the classification loss between training (.3804) and evaluation (.3951) is .147 is improved. Also, the detection boxes precision for large and medium boxes is improved.
 
@@ -104,8 +104,8 @@ It can be noted that the classification loss between training (.3804) and evalua
 The interference video for multiple set of test dataset is created.
 The object detection results are shown in the video below:
 
-<img src="images/animation1.gif" width="600">
+<img src="Images/animation1.gif" width="600">
 <hr>
 
-<img src="images/animation2.gif" width="600">
+<img src="Images/animation2.gif" width="600">
 <hr>

@@ -6,7 +6,7 @@ In this project, a convolutional neural network is created to detect and classif
 The training is monitored with a TensorBoard. Finally, hyperparameters's are tuned to improve the model's performance.<br>
 
 This project will include use of the TensorFlow Object Detection API, where you can deploy you model to get predictions on images sent to the API. A short video is created to assess the model predictions.<br>
-![img](Images/intro.png)
+![img](Images/Intro.png)
 
 ## Set up
 There are two options for the project: using the classroom workspace, with the necessary libraries and data already available for you, or local setup. If you want to use a local setup, you can use the below instructions for a Docker container if using your own local GPU, or otherwise creating a similar environment on a cloud provider's GPU instance. <br> 

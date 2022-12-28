@@ -31,7 +31,7 @@ This section contains a quantitative and qualitative description of the dataset.
 |<img src="Images/EDA/EDA1.png" width="600" height ="400"> | <img src="Images/EDA/EDA2.png" width="600" height="400"> |
 <hr>
 
-As an additional exploration, we are examining the distribution of classes in the image dataset.Here I take 10 random images to evaluate the class variance.
+As an additional exploration, we are examining the distribution of classes in the image dataset.Here I take 10 random images to evaluate the class variance.<br>
 ![img](Images/EDA/Additional_EDA.png)
 
 ### Cross validation
@@ -56,13 +56,13 @@ python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeli
 To monitor the training, you can launch a tensorboard instance by running `python -m tensorboard.main --logdir experiments/reference/`.
 Below images contain the performance matrix of model.
 * Performance metrics - training loss *(red)* vs. validation loss *(blue)*<br>
-![img](Images/Tensorboard/classification_loss_ref.jpg)
+![img](Images/Tensorboard/classification_loss_ref.png)
 
 * Performance metrics - Detection box prediction<br>
-![img](Images/Tensorboard/precision_ref.jpg)
+![img](Images/Tensorboard/precision_ref.png)
 
 * Performance metrics - learning rate<br>
-![img](Images/learning_rate.svg)
+![img](Images/learning_rate.png)
 
 The classification loss between training (.5132) and evaluation (.5560) is .428. Ideally, we have to improve the model for a better prediction on unseen data. Also, it should be noted that detection boxes precision for large and medium boxes can be improved.
 
@@ -82,9 +82,9 @@ I used the following augmentations:
 
 | | |
 |:---------------:|:---------------:|
-|<img src="Images/aug1.png" width="400"> | <img src="Images/aug2.png" width="400"> |
-|<img src="Images/aug3.png" width="400"> | <img src="Images/aug4.png" width="400"> |
-|<img src="Images/aug5.png" width="400"> |
+|<img src="Images/Data_augmentation/aug1.png" width="400"> | <img src="Images/Data_augmentation/aug2.png" width="400"> |
+|<img src="Images/Data_augmentation/aug3.png" width="400"> | <img src="Images/Data_augmentation/aug4.png" width="400"> |
+|<img src="Images/Data_augmentation/aug5.png" width="400"> |
 
 The new model with added augmentaion serves the basline for the experiment 1, which can  be launched by:
 ```
@@ -92,10 +92,10 @@ python experiments/model_main_tf2.py --model_dir=experiments/experiment1/ --pipe
 ```
 The improved model performance matrix is as follows:
 * Performance metrics - training loss *(red)* vs. validation loss *(blue)*<br>
-![img](Images/Tensorboard/classification_loss_exp1.jpg)
+![img](Images/Tensorboard/classification_loss_exp1.png)
 
 * Performance metrics - Detection box prediction<br>
-![img](Images/Tensorboard/precision_exp1.jpg)
+![img](Images/Tensorboard/precision_exp1.png)
 
 It can be noted that the classification loss between training (.3804) and evaluation (.3951) is .147 is improved. Also, the detection boxes precision for large and medium boxes is improved.
 
@@ -104,8 +104,8 @@ It can be noted that the classification loss between training (.3804) and evalua
 The interference video for multiple set of test dataset is created.
 The object detection results are shown in the video below:
 
-<img src="Images/animation1.gif" width="600">
+<img src="Images/animation/animation1.gif" width="600">
 <hr>
 
-<img src="Images/animation2.gif" width="600">
+<img src="Images/animation/animation2.gif" width="600">
 <hr>

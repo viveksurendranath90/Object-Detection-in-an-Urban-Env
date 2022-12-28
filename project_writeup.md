@@ -64,6 +64,9 @@ Below images contain the performance matrix of model.
 * Performance metrics - learning rate<br>
 ![img](Images/Tensorboard/learning_rate.png)
 
+* Performance metrics - Detection box recall<br>
+![img](Images/Tensorboard/recall_ref.png)
+
 The classification loss between training (.5132) and evaluation (.5560) is .428. Ideally, we have to improve the model for a better prediction on unseen data. Also, it should be noted that detection boxes precision for large and medium boxes can be improved.
 
 #### Improve on the reference
@@ -80,6 +83,7 @@ I used the following augmentations:
 * random_pixel_value_scale
 * random_distort_color
 
+The reason to use random_jpeg_quality is to overcome noise in the images which I found in dataset.random_adjust_brightness and random_adjust_contrast is used as some images are taken during night time. In some images,cars all look black or grey, hence I used random_rgb_to_gray. Also,random_pixel_value_scale and random_distort_color is used as some images are distorted 
 | | |
 |:---------------:|:---------------:|
 |<img src="Images/Data_augmentation/aug1.png" width="400"> | <img src="Images/Data_augmentation/aug2.png" width="400"> |
@@ -95,7 +99,10 @@ The improved model performance matrix is as follows:
 ![img](Images/Tensorboard/classification_loss_exp1.png)
 
 * Performance metrics - Detection box prediction<br>
-![img](Images/Tensorboard/precision_exp1.png)
+![img](Images/Tensorboard/precision_exp_1.png)
+
+* Performance metrics - Detection box recall<br>
+![img](Images/Tensorboard/recall_exp1.png)
 
 It can be noted that the classification loss between training (.3804) and evaluation (.3951) is .147 is improved. Also, the detection boxes precision for large and medium boxes is improved.
 
